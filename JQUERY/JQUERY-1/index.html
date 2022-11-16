@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innoraft Assignment JQUERY-1</title>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <style>
+        #top {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin-top: 5vw;
+            margin-left: 5vw;
+        }
+
+        #middle {
+            margin-left: 5vw;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="Mydiv">
+        <div id="top"></div>
+        <div id="middle">
+            <p>Hide the red box on button click</p>
+            <p><input type="button" value="Click me" id="DivHide"></p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#DivHide").click(function () {
+                $("#top").css("display", "none");
+            });
+        });
+    </script>
+</body>
+
+</html>

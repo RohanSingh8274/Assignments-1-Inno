@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innoraft Learning CSS-2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        *{
+            margin: 0;padding: 0;
+            color: white;
+            
+        }
+        p{
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: 23px;
+            padding-top: 17px;
+        }
+        .header{
+            /* border: 1px solid black; */
+            background-color: rgba(85, 212, 235, 255);
+            height: 60px;
+            width: 96%;
+            margin-top: 25px;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        .sidebar{
+            /* border: 1px solid black; */
+            background-color: rgba(160, 194, 99, 255);
+            float: left;
+            height: 424px;
+            width: 30%;
+            margin-top: 16px;
+            margin-left: 2%;
+
+        }
+        .mid{
+            /* border: 1px solid black; */
+            float: left;
+            height: 404px;
+            width: 65%;
+            margin-top: 16px;
+            margin-left: 1%;
+        }
+        .first{
+            /* border: 1px solid black; */
+            background-color: rgba(245, 197, 49, 255);
+            height: 342px;
+        }
+        .second{
+            /* border: 1px solid black; */
+            background-color: rgba(137, 137, 137, 255);
+            margin-top: 16px;
+            height: 65px;
+        }
+        .footer{
+            /* border: 1px solid black; */
+            background-color: rgba(255, 165, 0, 255);
+            height: 60px;
+            width: 96%;
+            margin-top: 455px;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            background-color: #e8eae6;
+            box-sizing: border-box;
+            padding: 10px;
+            z-index: 100;
+            display: none;
+            /*to hide popup initially*/
+        }
+          
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> <p>Header</p> </div>
+    <div class="sidebar"> <p>Sidebar</p></div>
+    <div class="mid">
+        <div class="first"> <p> Main Content</p></div>
+        <div class="second"> <p> Extra Content</p></div>
+    </div>
+    <div class="footer"  > 
+        <p>Footer</p>
+    </div>
+    <div class="popup">
+        <div onclick="PoPup()" class="close-btn">×</div>
+        <h3>I am POPup</h3>
+    </div>
+</body>
+<script>
+     $(document).ready(function () {
+            $("#footer").click(function () {
+                $("#popup").show();
+            });
+        });
+    </script>
+</html>
